@@ -168,14 +168,12 @@ func (p *Player) HandleControls() {
 			p.CurrentFrame++
 		}
 		
-		p.Source.X = float32(p.CurrentFrame * p.FrameWidth)
-		p.Source.Y = float32(p.CurrentRow * p.FrameHeight)
 	} else {
-		p.CurrentRow = 0
 		p.CurrentFrame = 0
-		p.Source.X = 0
-		p.Source.Y = 0
 	}
+
+	p.Source.X = float32(p.CurrentFrame * p.FrameWidth)
+	p.Source.Y = float32(p.CurrentRow * p.FrameHeight)
 }
 
 func (p *Player) Update() {
@@ -312,7 +310,7 @@ func GameLoop() {
 		mainPlayer.Draw()
 
 		camera.Target = rl.NewVector2(mainPlayer.Destination.X - (mainPlayer.Destination.Width / 2), mainPlayer.Destination.Y - (mainPlayer.Destination.Height / 2))
-		//camera.Zoom = 3.0
+		camera.Zoom = 4.0
 
 		rl.EndMode2D()
 		rl.EndDrawing()
