@@ -329,12 +329,14 @@ func (t *TileMap) drawChunk(texture rl.Texture2D, chunk *Chunk) {
 			if tileIndex != 0 { // Assuming 0 means no tile
 				//texture := textures[tileIndex]
 				//dest := rl.NewVector2(float32(chunk.X+x)*tileSize.X, float32(chunk.Y+y)*tileSize.Y)
-				sourceRect := rl.NewRectangle(float32(x), float32(y), float32(t.Tilesets[0].TileWidth), float32(t.Tilesets[0].TileHeight))
-				dest := rl.NewRectangle(float32(chunk.X+x)*float32(t.Tilesets[0].TileWidth), float32(chunk.Y+y)*float32(t.Tilesets[0].TileHeight), float32(t.Tilesets[0].TileWidth), float32(t.Tilesets[0].TileHeight))
+				srcX := 2 * chunk.Width
+				srcY := 5 * chunk.Height
+				sourceRect := rl.NewRectangle(float32(srcX), float32(srcY), float32(chunk.Width), float32(chunk.Height))
+				dest := rl.NewRectangle(float32(chunk.X+x)*float32(chunk.Width), float32(chunk.Y+y)*float32(chunk.Height), float32(chunk.Width), float32(chunk.Height))
 				//rl.DrawTextureRec(texture, rl.NewRectangle(float32(x), float32(y), tileSize.X, tileSize.Y), dest, rl.White)
-				rl.DrawTexturePro(texture, sourceRect, dest, rl.NewVector2(float32(t.Tilesets[0].TileWidth), float32(t.Tilesets[0].TileHeight)), 0, rl.White)
+				rl.DrawTexturePro(texture, sourceRect, dest, rl.NewVector2(float32(chunk.Width), float32(chunk.Height)), 0, rl.White)
 				//draw a solid rectangle to show the tile
-				rl.DrawRectangleLines(int32(dest.X), int32(dest.Y), int32(t.Tilesets[0].TileWidth), int32(t.Tilesets[0].TileHeight), rl.Red)
+				rl.DrawRectangleLines(int32(dest.X), int32(dest.Y), int32(chunk.Width), int32(chunk.Height), rl.Red)
 				//rl.DrawRectangle(int32(dest.X), int32(dest.Y), int32(tileSize.X), int32(tileSize.Y), rl.White)
 			}
 		}

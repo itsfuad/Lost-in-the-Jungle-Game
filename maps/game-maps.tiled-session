@@ -8,10 +8,10 @@
         },
         "tiles.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 136.66666666666669,
-                "y": 107.33333333333331
+                "x": 135.33333333333331,
+                "y": 106.66666666666663
             }
         },
         "tiles.tmx#Fences": {
@@ -30,19 +30,11 @@
         }
     },
     "last.exportedFilePath": "D:/Dev/BrainBirdLab/game/maps",
-    "last.imagePath": "D:/Dev/BrainBirdLab/game/assets/Tilesets",
-    "map.lastUsedExportFilter": "Lua files (*.lua)",
-    "map.lastUsedFormat": "tmx",
     "openFiles": [
         "tiles.tmx"
     ],
     "project": "game-maps.tiled-project",
     "recentFiles": [
         "tiles.tmx"
-    ],
-    "tileset.embedInMap": true,
-    "tileset.tileSize": {
-        "height": 16,
-        "width": 16
-    }
+    ]
 }

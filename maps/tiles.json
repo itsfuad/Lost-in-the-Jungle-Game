@@ -511,6 +511,7 @@
                  "x":32,
                  "y":32
                 }],
+         "class":"water",
          "height":80,
          "id":3,
          "name":"Water",
@@ -723,6 +724,7 @@
                  "x":16,
                  "y":16
                 }],
+         "class":"grass",
          "height":48,
          "id":1,
          "name":"Grass1",
@@ -825,9 +827,10 @@
                  "x":0,
                  "y":16
                 }],
+         "class":"grass",
          "height":32,
          "id":2,
-         "name":"Grass2",
+         "name":"Grass1",
          "opacity":1,
          "startx":-16,
          "starty":0,
@@ -883,10 +886,11 @@
                  "x":0,
                  "y":0
                 }],
+         "class":"dirt",
          "height":16,
          "id":4,
          "name":"Dirt",
-         "opacity":1,
+         "opacity":0.77,
          "startx":-16,
          "starty":0,
          "type":"tilelayer",
@@ -898,14 +902,15 @@
  "nextlayerid":5,
  "nextobjectid":1,
  "orientation":"orthogonal",
- "renderorder":"right-down",
+ "renderorder":"left-up",
  "tiledversion":"1.10.2",
  "tileheight":16,
  "tilesets":[
         {
+         "class":"grass",
          "columns":11,
          "firstgid":1,
-         "image":"assets\/Tilesets\/Grass.png",
+         "image":"..\/assets\/Tilesets\/Grass.png",
          "imageheight":112,
          "imagewidth":176,
          "margin":0,
@@ -916,9 +921,10 @@
          "tilewidth":16
         }, 
         {
+         "class":"water",
          "columns":4,
          "firstgid":78,
-         "image":"assets\/Tilesets\/Water.png",
+         "image":"..\/assets\/Tilesets\/Water.png",
          "imageheight":16,
          "imagewidth":64,
          "margin":0,
@@ -929,9 +935,10 @@
          "tilewidth":16
         }, 
         {
+         "class":"dirt",
          "columns":11,
          "firstgid":82,
-         "image":"assets\/Tilesets\/Tilled_Dirt.png",
+         "image":"..\/assets\/Tilesets\/Tilled_Dirt.png",
          "imageheight":112,
          "imagewidth":176,
          "margin":0,
