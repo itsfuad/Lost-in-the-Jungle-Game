@@ -111,9 +111,6 @@ func (p *Player) Draw() {
 	rl.DrawCircleLines(x, y, p.Destination.Width/3, rl.Green)
 }
 
-func DebugPlayer(p *Player) {
-
-}
 
 func (p *Player) HandleControls() {
 
