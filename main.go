@@ -344,7 +344,6 @@ func (t *TileMap) drawChunk(texture rl.Texture2D, chunk *Chunk) {
 }
 
 func (t *TileMap) Update() {
-	//
 	t.Draw()
 }
 
